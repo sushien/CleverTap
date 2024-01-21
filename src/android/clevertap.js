@@ -1,18 +1,3 @@
-// Empty constructor
-function clevertap() {}
-
-
-
-// Installation constructor that binds clevertap to window
-clevertap.install = function() {
-  if (!window.plugins) {
-    window.plugins = {};
-  }
-  window.plugins.clevertap = new clevertap();
-  return window.plugins.clevertap;
-};
-cordova.addConstructor(clevertap.install);
-
 import Account from './modules/account'
 import CleverTapAPI from './modules/api'
 import DeviceManager from './modules/device'
